@@ -89,7 +89,7 @@ export default function Projects() {
   const visibleProjects = showAll ? projects : projects.slice(0, 2);
 
   return (
-    <section className="py-16 w-full px-40">
+   <section className="py-16 w-full px-4 md:px-24">
       <h2 className="text-3xl font-bold text-center mb-10">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {visibleProjects.map((p, i) => (
