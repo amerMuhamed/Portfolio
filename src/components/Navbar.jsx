@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 export default function Navbar() {
-  const sections = [
+  const sections = useMemo(() => [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
-  ];
+  ], []);
 
   const [activeSection, setActiveSection] = useState("home");
 

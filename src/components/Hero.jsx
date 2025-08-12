@@ -23,6 +23,7 @@ export default function Hero() {
       className="flex flex-col justify-center items-center text-center px-4  pt-2"
     >
       <motion.img
+        // any image link
         src="assets/amer.jpg"
         alt="Profile"
         variants={imageAnimation}
