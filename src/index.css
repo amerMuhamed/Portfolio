@@ -2,16 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* التدرج من الصورة */
+  background: linear-gradient(to bottom, #0f1d33, #4b6b88, #f4c97a);
+  background-attachment: fixed; /* يخلي التدرج ثابت عند السكروول */
 }
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #00ffff;
+  width: 33ch;
+  /*عددالحروف*/
+  animation: typing-loop 8s steps(33, end) infinite,
+    blink 0.7s step-end infinite;
+}
+
+@keyframes typing-loop {
+  0% {
+    width: 0ch;
+  }
+  40% {
+    width: 33ch;
+  }
+  60% {
+    width: 33ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* html {
+  scroll-behavior: smooth;
+} */
